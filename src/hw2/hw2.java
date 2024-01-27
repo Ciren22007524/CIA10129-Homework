@@ -1,6 +1,6 @@
 package hw2;
 
-public class hw2 {
+public class Hw2 {
 //	• 請設計一隻Java程式,計算1~1000的偶數和 (2+4+6+8+...+1000)
 	public static void main(String[] args) {
 		int sum = 0; // 宣告總和 sum = 0
@@ -63,6 +63,7 @@ public class hw2 {
 		}
 		System.out.println();
 		System.out.println("總共有 " + sum1 + " 個");
+		// System.out.println("總共有 " + ( n - c1 - d1  + 1 ) + " 個"); // 用扣的，44重複計算 +1
 		System.out.println("======================================");
 //	• 請設計一隻Java程式,輸出結果為以下:
 //	1 2 3 4 5 6 7 8 9 10
@@ -104,4 +105,3 @@ public class hw2 {
 		}
 	}
 }
-
