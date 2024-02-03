@@ -21,7 +21,7 @@ public class Hw4Test {
 				{ 98, 70, 89, 90, 75, 90, 89, 90 },
 				{ 90, 80, 100, 75, 50, 20, 99, 75 },
 		};
-		int[] arr3 = {0, 0, 0, 0, 0, 0, 0, 0}; // 計算考最高分次數
+		int[] arr3 = new int[8]; // 計算考最高分次數
 		for (int i = 0; i < arr1.length; i++) {
 			Arrays.sort(arr1[i]); // 對arr1排序，最高分位於最後一項
 			for (int j = 0; j < arr1[i].length; j++) {

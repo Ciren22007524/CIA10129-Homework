@@ -46,28 +46,57 @@ public class Hw4 {
 //{“mercury”, “venus”, “earth”, “mars”, “jupiter”, “saturn”, “uranus”, “neptune”}
 //請用程式計算出這陣列裡面共有多少個母音(a, e, i, o, u) 
 //(提示：字元比對，String方法
-		String[] c1 = { "mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune" };
-		String sp = " "; // 空白值做字串比較
-		int sum1 = 0; // 計算共多少母音
+		// 字元比對
+//		String[] c1 = { "mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune" };
+//		String sp = " "; // 空白值做字串比較
+//		int sum1 = 0; // 計算共多少母音
 		// 使用陣列，將c1各項字串放入t1矩陣(char)，強制轉換為t2對每個字元做比對
+//		for (int i = 0; i < c1.length; i++) {
+//			
+//			                 // 各項字串長度
+//			for (int j = 0; j < c1[i].length(); j++) {
+//				char[] t1 = new char[c1[i].length()];
+//				t1[j] = c1[i].charAt(j);
+//				String[] t2 = new String[c1[i].length()];
+//				t2[j] = String.valueOf(t1[j]); // 強制轉換為String
+//				int a = t2[j].compareTo(sp); // 比對結果
+//				// ASCII值 " "= 32, a = 97, e = 101, i = 105, o = 111, u = 117
+//				// 字串比對結果: a = 65, e = 69, i = 73, o = 79, u = 85
+//				if (a == 65 || a == 69 || a == 73 || a == 79 || a == 85) {
+//					sum1++;
+//				}
+//			}
+//		}
+//		System.out.println("總共有" + sum1 + "個母音");
+//		System.out.println("================================");
+		String[] c1 = { "mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune" };
+		int sum1 = 0; // 計算共多少母音
+
 		for (int i = 0; i < c1.length; i++) {
-			
-			                 // 各項字串長度
+			                  // 各單字長度
 			for (int j = 0; j < c1[i].length(); j++) {
-				char[] t1 = new char[c1[i].length()];
-				t1[j] = c1[i].charAt(j);
-				String[] t2 = new String[c1[i].length()];
-				t2[j] = String.valueOf(t1[j]); // 強制轉換為String
-				int a = t2[j].compareTo(sp); // 比對結果
-				// ASCII值 " "= 32, a = 97, e = 101, i = 105, o = 111, u = 117
-				// 字串比對結果: a = 65, e = 69, i = 73, o = 79, u = 85
-				if (a == 65 || a == 69 || a == 73 || a == 79 || a == 85) {
+				      // 比對各單字字母
+				switch (c1[i].charAt(j)) {
+				case 'a':
 					sum1++;
+					break;
+				case 'e':
+					sum1++;
+					break;
+				case 'i':
+					sum1++;
+					break;
+				case 'o':
+					sum1++;
+					break;
+				case 'u':
+					sum1++;
+					break;
 				}
 			}
+
 		}
 		System.out.println("總共有" + sum1 + "個母音");
 		System.out.println("================================");
 	}
-
 }
