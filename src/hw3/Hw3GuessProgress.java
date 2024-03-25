@@ -8,22 +8,32 @@ public class Hw3GuessProgress {
 	public static void main(String[] args) {
 		System.out.println("開始猜數字吧!");
 		Scanner sc = new Scanner(System.in);
-		int n = 0;
 		int a = (int)(Math.random()*101);
-		while ( n < 1) {
-			int number = sc.nextInt();
-			if ( a != number ) {
-				System.out.print("猜錯囉，");
-				if ( a > number ) {
-					System.out.println("小於正確答案");
-				} else {
-					System.out.println("大於正確答案");
-				}
-			} else {
-				System.out.println("答對了 ! 答案就是" + a);
-				break;
+		int number;
+//		1.while迴圈
+//		while (true) {
+//			number = sc.nextInt();
+//			if ( a != number ) {
+//				System.out.print("猜錯囉，");
+//				if ( a > number ) {
+//					System.out.println("小於正確答案");
+//				} else {
+//					System.out.println("大於正確答案");
+//				}
+//			} else {
+//				System.out.println("答對了 ! 答案就是" + a);
+//				break;
+//			}
+//		}
+//		2.do-while (更簡潔)
+		do {
+			number = sc.nextInt();
+			if(a > number) {
+				System.out.println("小於正確答案");
+			} else if(a < number){
+				System.out.println("大於正確答案");
 			}
-		}
-		
+		} while(a != number);
+		System.out.println("答對了 ! 答案就是" + a);
 	}
 }

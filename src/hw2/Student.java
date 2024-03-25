@@ -1,6 +1,9 @@
 package hw2;
 
 public class Student {
+//	public void student() {
+//		
+//	}
 	int score = 90;
 	
 	// 每休息一個小時，score就會減1

@@ -5,18 +5,28 @@ package hw3;
 // 的號碼與總數
 	
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class Hw3Lottery {
 	public static void main(String[] args) {
 		System.out.println("阿文...請輸入你討厭哪個數字 ?");
 		Scanner sc = new Scanner(System.in);
 		int number = sc.nextInt();
+		System.out.println("==========lambda==========");
+		long sum2 = IntStream.rangeClosed(1, 49)
+							 .filter(n -> n % 10 != number && n / 10 % 10 != number)
+							 .peek(n -> System.out.print(n + " "))
+							 .count();
+		System.out.println();
+		System.out.println("總共有 " + sum2 + " 個數字可選");
+// =========================舊答案================================
+		System.out.println("==========舊答案==========");
 		int sum1 = 0;
 		for (int n = 1; n <= 49; n++) {
 			if ( n % 10 == number ){
 				
 			}
-			else if ( n / (number * 10) == 1){
+			else if ( n / 10 % 10 == 1){
 
 			}
 			else {

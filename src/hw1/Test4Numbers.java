@@ -1,3 +1,4 @@
+
 package hw1;
 
 public class Test4Numbers {
@@ -6,12 +7,12 @@ public class Test4Numbers {
 //			System.out.println(4 * n);
 //		}
 		
-		for (int i =0; i <= 100; i++) {
-			if (i % 4 ==0)
+		for (int i = 0; i <= 100; i++) {
+			if (i % 4 == 0)
 				System.out.print(i + " ");
 		}
 		System.out.println();
-		for (int i =0; i <= 100; i+=4) {
+		for (int i = 0; i <= 100; i += 4) {
 			System.out.print(i + " ");
 		}
 	}

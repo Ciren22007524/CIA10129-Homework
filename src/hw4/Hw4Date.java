@@ -43,5 +43,19 @@ public class Hw4Date {
 			break;
 		}
 		System.out.println("輸入的日期為該年第" + sum + "天");
+		//Stream
+		// 輸入月份與日期
+//        System.out.println("請輸入月份：");
+//        int month = sc.nextInt(); // 月份
+//        System.out.println("請輸入日期：");
+//        int day = sc.nextInt(); // 日期
+        
+        // 計算總天數
+//        sum = IntStream.range(0, month - 1)
+//                .map(i -> M[1][i])
+//                .sum();
+//        sum += day;
+//        
+//        System.out.println("輸入的日期是該年的第 " + sum + " 天");
 	}
 }
