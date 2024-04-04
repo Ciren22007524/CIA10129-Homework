@@ -41,26 +41,26 @@ public class Hw7Data {
             // 追加模式
             Files.writeString(path, "", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
 
-            // 写入随机数
+            // 生成隨機數
             for (int i = 0; i < 10; i++) {
-                int randomNumber = random.nextInt(1000) + 1; // 生成1到1000的随机数
-                // 写入数据，每个数字占一行
+                int randomNumber = random.nextInt(1000) + 1; // 生成1到1000的隨機數
+                // 寫入數據，每個數字佔一行
                 Files.writeString(path, String.valueOf(randomNumber) + "\n", StandardOpenOption.APPEND);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
         // 3. Stream
-        // 要写入的文件路径
+        // 要寫入的文件路徑
         Path path = Paths.get("C:\\CIA101_Workspace\\CIA10129-Homework\\src\\hw7\\Data.txt");
 
-        // 创建随机数生成器
+        // 建立Random物件生成隨機數
         Random random = new Random();
 
-        // 生成随机数并转换为字符串
-        String data = random.ints(10, 1, 1001) // 生成10个1到1000之间的随机数
-                .mapToObj(String::valueOf) // 将整数转换为字符串
-                .reduce("", (s1, s2) -> s1 + s2 + "\n"); // 拼接成一个字符串，每个数字占一行
+        // 生成隨機數並轉成字串
+        String data = random.ints(10, 1, 1001) // 生成10個1到1000之間的隨機數
+                .mapToObj(String::valueOf) // 將隨機數轉成字串
+                .reduce("", (s1, s2) -> s1 + s2 + "\n"); // 拼接成一個字串拼，每個數字佔一行
 
         // 寫入數據到文件
         try {
